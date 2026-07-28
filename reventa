@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReTrend | Tienda de Reventa</title>
+  <style>
+    /* RESET & ESTILOS BASE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    /* BARRA NAVEGACIÓN */
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #00ff88;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #00ff88;
+    }
+
+    /* SECCIÓN HERO */
+    .hero {
+      background: linear-gradient(135deg, #111 0%, #222 100%);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+
+    .badge-authentic {
+      display: inline-block;
+      background-color: rgba(0, 255, 136, 0.15);
+      color: #00ff88;
+      border: 1px solid #00ff88;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    /* GRID DE PRODUCTOS */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background-color: #eee;
+    }
+
+    .product-info {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-condition {
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #2e7d32;
+      background: #e8f5e9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      width: fit-content;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #111;
+      margin-top: auto;
+      margin-bottom: 1rem;
+    }
+
+    .btn-buy {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.2s;
+    }
+
+    .btn-buy:hover {
+      background-color: #00ff88;
+      color: #111;
+    }
+
+    /* FOOTER SEGURO */
+    footer {
+      background-color: #111;
+      color: #888;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-top: 1px solid #333;
+    }
+
+    .security-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #00ff88;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <header>
+    <div class="logo">RETREND</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="badge-authentic">✓ Garantía de Verificación</span>
+    <h1>Artículos Disponibles</h1>
+    <p>Consolas, accesorios, relojes y videojuegos probados y funcionales.</p>
+  </section>
+
+  <!-- CATÁLOGO DE PRODUCTOS -->
+  <main class="container">
+    <h2 class="section-title">Productos en Venta</h2>
+
+    <div class="products-grid">
+
+      <!-- Producto 1: Consolas y Teclado -->
+      <article class="product-card">
+        <img src="lote-consolas.jpg" alt="Lote PS4 y PS3 con Mandos y Teclado" class="product-image">
+        <div class="product-info">
+          <span class="product-condition">✓ Verificado - Usado</span>
+          <h3 class="product-title">Lote PS4 + PS3 + Mandos + Teclado Gaming</h3>
+          <p class="product-price">199,99 €</p>
+          <button class="btn-buy">Añadir al Carrito</button>
+        </div>
+      </article>
+
+      <!-- Producto 2: Reloj G&C -->
+      <article class="product-card">
+        <img src="reloj-gc.jpg" alt="Reloj Táctico G&C" class="product-image">
+        <div class="product-info">
+          <span class="product-condition">✓ Verificado - Excelente Estado</span>
+          <h3 class="product-title">Reloj Táctico Digital/Analógico G&C</h3>
+          <p class="product-price">49,99 €</p>
+          <button class="btn-buy">Añadir al Carrito</button>
+        </div>
+      </article>
+
+      <!-- Producto 3: Pack Juegos PS4 -->
+      <article class="product-card">
+        <img src="juegos-ps4.jpg" alt="Pack 3 Juegos PS4" class="product-image">
+        <div class="product-info">
+          <span class="product-condition">✓ Verificado - Como Nuevo</span>
+          <h3 class="product-title">Pack 3 Juegos PS4 (Stray, Fallout 4, Sombras de Guerra)</h3>
+          <p class="product-price">29,99 €</p>
+          <button class="btn-buy">Añadir al Carrito</button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2026 ReTrend - Todos los derechos reservados.</p>
+    <div class="security-badge">
+      🔒 Conexión encriptada HTTPS y pagos seguros
+    </div>
+  </footer>
+
+</body>
+</html>
